@@ -1,0 +1,20 @@
+﻿<Window x:Class="UserWpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <DataGrid Grid.Row="1"
+                             Grid.Column="0" Grid.ColumnSpan="2"
+                             AutoGenerateColumns="False" 
+                             x:Name="lvResults" 
+                             Focusable="True"
+                             CanUserAddRows="False"
+                             SelectionChanged="lvResults_SelectionChanged"
+                            
+                             IsReadOnly="True"
+                             FontFamily="Arial Unicode MS"
+                             HeadersVisibility="Column"
+                              CanUserResizeColumns="True">
+        </DataGrid>
+    </Grid>
+</Window>
