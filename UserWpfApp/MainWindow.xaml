@@ -3,21 +3,14 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
-        <DataGrid Grid.Row="0"
+        <DataGrid 
                   DataContext="UserViewModel"
-                  
-                             Grid.Column="0" Grid.ColumnSpan="2"
-                             AutoGenerateColumns="False" 
+                             AutoGenerateColumns="True" 
                              x:Name="lvResults" 
                              Focusable="True"
                              CanUserAddRows="False"
+                             SelectionMode="Single"
+                             SelectionUnit="FullRow"
                              SelectionChanged="lvResults_SelectionChanged"
                              ItemsSource="{Binding ListOfUsers}"
                              IsReadOnly="True"
